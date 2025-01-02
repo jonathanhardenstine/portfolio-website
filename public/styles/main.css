@@ -1,0 +1,357 @@
+.gradient-background {
+  background: linear-gradient(270deg, #144272, #2C74B3, #144272);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  font-family: "Nuosu SIL", sans-serif;
+}
+
+.gradient-textcolor {
+  color: linear-gradient(270deg, rgb(165, 246, 165), rgb(250, 250, 165), rgb(250, 148, 148));
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+hr {
+  position: relative;
+  border: none;
+  height: 12px;
+  background: whitesmoke;
+  margin: 1vh 0vh;
+}
+
+a:hover {
+  color: #EDF1D6;
+}
+
+#title {
+  font-family: "Tilt Prism", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 9vh;
+}
+
+#AboutText {
+  padding: 5px 20px;
+}
+
+#ContactForm {
+  padding: 0rem 3rem;
+  font-size: 2.5vh;
+
+  #ContactFormBackground {
+    height:100%; 
+    background-color: rgb(203, 218, 237);
+    padding-top: 0.5rem;
+
+    #ContactFormName {
+      text-decoration: underline;
+      font-size: 3vh;
+    }
+
+    #ContactFormLabelGrid {
+      display: grid;
+      flex: 1;
+      grid-template-columns: 50% 50%;
+    }
+
+    .ContactFormLabelPadding {
+      padding-right: 15vw;
+      padding-top: 10px;
+
+      button {
+        font-size: 2.5vh;
+      }
+
+      input {
+        font-size: 2.5vh;
+      }
+
+      .ContactFormRequiredLabelFormat {
+        padding-left: 5px;
+        margin: 0px;
+      }
+    }
+    
+    .ContactFormCheckboxGrid {
+      display: grid; 
+      flex: 1; 
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    #Success {
+      color: green;
+    }
+
+    #Failed {
+      color: red;
+    }
+  }
+}
+
+#MainPageNav {
+  display: flex; 
+  justify-content: space-evenly;
+}
+
+#Footer {
+  justify-content: flex-end; 
+  display: flex; 
+  padding-right: 10px; 
+  font-size: 14px
+}
+
+.NavActive {
+  color: #43a2f6;
+  text-decoration: underline;
+}
+
+.NavDefault {
+  color: black;
+  text-decoration: none;
+}
+
+.FlexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.Opaque {
+  filter: opacity(60%);
+}
+
+.PageViewHeight {
+  height: 85vh
+}
+
+.SimpleFlexWrapper {
+  display: flex;
+}
+
+.HomePage {
+  align-items: center;
+  justify-content: center;
+}
+
+#HomeImg {
+  height: 30%; 
+  background-size: 30%; 
+}
+
+.SkillTypeGrid {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 100%;
+  /* border-radius: 15px;
+  border: 4px solid black; */
+}
+
+#SkillsTypeNav {
+  display: flex; 
+  justify-content: flex-start;
+}
+
+.SkillTypeOuterBorder {
+  height: 100%;
+  width: 100%;
+  border-radius: 48px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  .SkillTypeInnerBorder {
+    height: 90%;
+    width: 90%;
+    border-radius: 48px;
+  
+    a {
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      img {
+        width: 30%;
+        height: 30%;
+        border-radius: 8px;
+        padding: 2px;
+        align-self: center
+      }
+    }
+  }
+}
+
+.SkillTypeSelected {
+  border-top: 4px solid #43a2f6;
+  border-bottom: 4px solid #43a2f6;
+
+  a {
+    color: #43a2f6;
+    text-decoration: none;
+    align-items: center;
+
+    img {
+      background-color: #43a2f6;
+    }
+  }
+}
+
+.SkillTypeDefault {
+  border-top: 4px solid #0A2647;
+  border-bottom: 4px solid #0A2647;
+
+  a {
+    color: black;
+    text-decoration: none;
+    align-items: center;
+
+    img {
+      background-color: #0A2647;
+    }
+  }
+}
+
+.SkillTypeNameDisplay {
+  height: 100%; 
+  justify-content: center; 
+  padding: 0px 4px;
+  font-size: 2.75vh;
+}
+
+#SkillNameCardsContainer {
+  display: flex;
+  height: 100%; 
+  width: 100%; 
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0px;
+
+  .SkillNameCards {
+    height: 23%;
+    width: 30%;
+    text-align: center;
+    border-radius: 15px;
+
+    .SkillNameCardTextColor {
+      color: black;
+      border: 0.5px solid #43a2f6;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      border-radius: 15px;
+    }
+
+    .TrainingInProgress {
+      color: #0A2647;
+      background-color: #0a26475c;
+      border: 0.5px solid #0a26475c;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      border-radius: 15px;
+    }
+  
+    .SkillNameCardsLink {
+      display: flex; 
+      flex-direction: column; 
+      width: 100%; 
+      height: 100%;
+      text-decoration: none;
+
+      .SkillNameSizing {
+        text-decoration: underline; 
+        font-size: 2.6vh;
+      }
+
+      .SkillCardSubTitles {
+        padding: 5px;
+        text-align: left;
+        font-size: 12px;
+        display: grid; 
+        flex: 1; 
+        grid-template-rows: 31% 31% 38%;
+        
+        .SkillSpecificsSizing {
+          text-align: center; 
+          font-size: 2.2vh;
+        }
+
+        .SkillDescriptionSizing {
+          font-size: 1.9vh; 
+          overflow: ellipsis;
+        }
+      
+        .TrainingDescription {
+          display: grid;
+          flex: 1;
+          grid-template-columns: 20% 80%;
+          font-size: 2vh;
+
+          .TrainingDescriptionUnderline {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.SkillNameCardTextColor:hover {
+  background-color: #43a2f6;
+}
+
+.CertificationPositioning {
+  display:flex; 
+  flex-wrap: wrap; 
+  justify-content: space-evenly; 
+  padding: 5px 0px;
+  
+  .CertificationImg {
+    width: 30%;
+    height: auto;
+    background-size: 30%;
+  }
+}
+
+.ProjectDocumentationDesc {
+  text-align: center; 
+  text-decoration: underline;
+  background-color: #2C74B3;
+  border-radius: 22px;
+  border: 1px solid #43a2f6;
+  margin-bottom: 2px;
+}
+
+.ProjectDocumentationImg {
+  width: 100%;
+  height: 400px;
+  background-color: #2C74B3;
+  border-radius: 22px;
+  border: 1px solid #43a2f6;
+  padding: 6px;
+}
+
+video {
+  object-fit: cover;
+  border-radius: 22px;
+  }
+
+.PrimaryCertificationImg {
+  width: 70%; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+
+  img {
+    width: 100%;
+  }
+}

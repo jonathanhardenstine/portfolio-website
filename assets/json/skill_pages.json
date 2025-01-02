@@ -1,0 +1,277 @@
+{"/skillpage-api":
+    {"skillName": "APIs",
+        "skillPageDetail": "GraphQL:<br />Undergoing training<br /><br />REST:<br />In multiple trainings on Udemy (web development, flutter app development), there were dedicated sections to show data persistence via REST api functionality some with relational and others with NoSQL databases.<br /><br />Postman:<br />I completed the Postman 30 day training",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-aws": 
+    {"skillName": "AWS Cloud",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-azure": 
+    {"skillName": "Azure Cloud",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-crystal": 
+    {"skillName": "Crystal Reports",
+        "skillPageDetail": "This was a secondary reporting tool to using Excel during my first 3 years at Geisinger Health System.  The reports were hosted on Business Objects for leadership to access.",
+        "Functionality": ["paramenters", "formulas", "database connections", "crosstabs", "subreports", "conditional formatting", "user access filtering"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-csshtml": 
+    {"skillName": "CSS and HTML",
+        "skillPageDetail": "During the course of 2 and half months in 2024, I completed the \"Web Development Bootcamp\" course on Udemy.  The first 10 hours introduced CSS and HTML functionality.<br /><br />I completed this website that you are currently viewing in about 2 months as an application of the finishing the Udemy training.",
+        "Functionality": ["bootstrap", "flexbox", "forms", "grid", "media queries"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "/images/Udemy Certificate - Web Development.png", 
+        "Additional Certifications": []
+    },
+"/skillpage-c": 
+    {"skillName": "C Programming",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-c#": 
+    {"skillName": "C#",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-c++": 
+    {"skillName": "C++",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },  
+"/skillpage-docker": 
+    {"skillName": "Docker",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-excel": 
+    {"skillName": "Excel",
+        "skillPageDetail": "This was the primary reporting tool for the first 5 years of my employment at Geisinger Health System.  About 30% of a typical workday was spent creating adhoc summaries, building new reports for leadership and maintaining/enhancing reports previously built.<br /><br />Efficiency Improvement:<br />Previously the process was to copy the data from sql, manually paste into a hidden data sheet, manually reset the cell references for the pivot tables, make any other routine updates, draft and email and send the reports.  I implemented data connections and vba workbook_open Sub procedures to automate the refreshing and distribution of routine reports.  Daily, weekly, monthly reports became fully automated using that Windows Task Scheduler with the VBA not only refreshing the reports but also sending the emails to the respective report' recipients with the report attached.",
+        "Functionality": ["formulas (including vlookup, indirect, if, sumif, ect.)", "pivot tables", "charts", "database connections", "drop down lists", "conditional formatting", "print area", "freeze panes", "hidden sheets", "password lock"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-flutter": 
+    {"skillName": "Flutter SDK and Dart",
+        "skillPageDetail": "In 2019, I ideated a phone app for the youth group at my church, completed training and developed it to the point of deploying versions on both iOS TestFlight and Android Internal Test Track.  In 2021, I stopped work on the project due to scope and change in personal priorities.<br /><br />I designed the initial mock wireframe in Adobe XD, after which I then completed a 30 hour training in Udemy.  The Firebase backend was implemented 3 months after starting development.  I also managed a Milestone and Product Backlog tracker document as well as parsed the json Firebase data into a relational SQL database model.",
+        "Functionality": ["classes, widgets, providers", "async", "iterables", "state", "push named routes", "REST APIs", "json decode and encode", "indexWhere", "removeAt", "sort", "compareTo", "where", "groupBy", "authentication", "function parameters", "notifyListeners", "inkwell"],
+        "Project Documentation": 
+            [{"description": "App Screens<br />(Completed Tasks vs All Tasks)", "image": "/images/Phone App Tasks by Screen.png"}, 
+            {"description": "Phone App Development<br />Phases 1 - 5", "image": "/images/Phone App Development Phases 1-5.png"}, 
+            {"description": "Phone App Development<br />Phases 6 - 9", "image": "/images/Phone App Development Phases 6-9.png"}, 
+            {"description": "Phone App Tasks<br />Detail Level", "image": "/images/Phone App Tasks Log p1.png"}, 
+            {"description": "Phone App Tasks<br />Detail Level continued", "image": "/images/Phone App Tasks Log p2.png"}
+            ],
+        "Video": "/video/YG Phone App.mp4",
+        "Primary Certification": "N/A", 
+        "Additional Certifications": []
+    },
+"/skillpage-github": 
+    {"skillName": "GitHub",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-go": 
+    {"skillName": "Go Programming",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },    
+"/skillpage-java": 
+    {"skillName": "Java",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-js": 
+    {"skillName": "JavaScript",
+        "skillPageDetail": "Over 2 and half months in 2024, I completed the \"Web Development Bootcamp\" course on Udemy.  The bulk of the course (30 hours) focused on JavaScript libraries.<br /><br />I completed this website that you are currently viewing in about 2 months as an application of the finishing the Udemy training.  This website was built using Express and EJS.",
+        "Functionality": ["EJS", "Express", "jQuery", "Node", "React"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "/images/Udemy Certificate - Web Development.png", 
+        "Additional Certifications": []
+    },
+"/skillpage-nosql": 
+    {"skillName": "NoSQL",
+        "skillPageDetail": "Firebase:<br />In 2020, I implement Firebase as the backend for a phone app I was building for my church youth group.  It was my first exposure to a NoSQL environment.  I also exported the data and used MySQL to develop a relational model of the data.<br /><br />JSON:<br />In 2022, the company I was working for (Geisinger Health System) contracted with a new vendor for their Care Managment documentation platform.  The vendor was a small start up and it turned out they did not have a data model nor data feed to provide us.  We ended up agreeing to receiving raw JSON files.  I worked with the DBA on my team to develop the relational model.  As the vendor made updates to their platform without notifying us regarding the back-end impact, I would identify changes to the JSON object structures, discuss with the vendor, and then work with our DBA to apply the necessary updates to relational model.",
+        "Functionality": ["authentication", "JSON parsing", "lists", "object keys and values"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-php": 
+    {"skillName": "PHP",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },  
+"/skillpage-powerbi": 
+    {"skillName": "Power BI",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-python": 
+    {"skillName": "Python",
+        "skillPageDetail": "I have done training in both Udemy and DataCamp.  I am familiar with both extracting and cleansing data as well as building applications with Python.",
+        "Functionality": ["pandas", "numpy", "seaborn", "matplotlib", "math", "table merging", "table description", "lists, dictionaries, sets", "loops", "if and switch statements", "functions", "modules", "aliases"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "/images/Training Completion - Python Data Fundamentals.png", 
+        "Additional Certifications": []
+    },
+"/skillpage-relationaldb": 
+    {"skillName": "Relational Databases",
+        "skillPageDetail": "I worked for Geisinger Health System as a Data Analyst for 10 years.  I had the opportunity to work on several projects where I architected relational production database models.<br /><br />Nurse Site List:<br />Historically this was managed by a co-worker in 2 SQL tables.  I built a vba front-end with a sql back-end of about 15 tables and 2 stored procedures.  The back-end structure received data twice per week, applied the changes, and recorded the pre and post changes applied along with pivoted pdf friendly structure of the data.  The final product saved multiple back and forth emails per week with leadership requesting changes as well as provided leadership with visual documentation of current state they previously never had access to.<br /><br />Noteworth Vendor JSON files:<br />A new vendor Geisigner began to contract with in 2022 for their Care Management platform only had JSON files available to provide access to the data.  I worked with the DBA on my team to parse out these files and maintain a relational data model over the 2 year contract.  As the vendor made updates to their platform without notifying us regarding the back-end impact, I would identify changes to the JSON object structures, discuss with the vendor, and then work with our DBA to apply the necessary updates to relational model.  I also then modeled table structures for analytic reporting to be pulled from.",
+        "Functionality": ["functions", "stored procedures", "tables", "metadata", "users", "roles", "servers", "primary keys", "foreign keys", "indexes"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": ["/images/Training Completion - SQL for Database Administrators.png","/images/Training Completion - SQL Data Engineer Associate.png"]
+    },
+"/skillpage-sql": 
+    {"skillName": "SQL",
+        "skillPageDetail": "I worked for Geisinger Health System as a Data Analyst for 10 years.  About 70% of my workday writing SQL code.  Scripts for the reports were between a few hundred to 5,000 lines of code.  Depending on the report requirements, I joined data from tables in their respective servers and databases.  Sometimes I was provided with a file with data that needed to be imported first.  No matter the source, there was always some level of clean-up needed to be done to the data which first required running queries to familiarize myself with the data.  In certain routine reports, building and maintaining reference tables was needed to roll up values for presenting aggregations in the final report.<br /><br />Efficiencies:<br />Over the course of my employment at Gesinger, I worked with a variety of data sets including (Insurance Membership, Grievance and Appeals, Case Management and EPIC EMR data).  When I would transition roles and take over routine report ownership from a former co-worker, I would review the scripts and often find opportunities for implementing best practices.  These included standardized naming of both permanent and temporary tables, creating stored procedures, implementing validation steps, creating views to reduce redunancy of common table joins across scripts, and changing large case statements with hard coded values to be joins to manually maintained reference tables.  I highly value having standardized views/reporting tables to pull from that reflect the front end structure as closely as possible for adhocs, reducing query join redundancy across routine report scripts, and being able to quickly answer questions users/leadership has when referencing data they are seeing on the front end.<br /><br />I primarily have used SSMS but for 2 years during my employment with Geisinger, there was a shift to using Hive SQL.  I also had one project where the data access was provided in MySQL.  I did initial data discovery and worked with the DBA on my team to provide direction regarding which databases and tables were needed to be replicated on our departmental SSMS server",
+        "Functionality": ["select, from, where, group by, order by", "like, in, having", "left, right, inner joins", "drop, create, insert into", "case statements", "aliases", "CTEs", "embbedded queries", "functions, stored procedures, parameters", "views", "meta data", "window functions", "indexing", "loops", "dynamic sql", "pivot and unpivot", "if exists", "union and except"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": ["/images/Training Completion - SQL Data Engineer Associate.png", "/images/Training Completion - Data Analyst Associate.png"]
+    },
+"/skillpage-ssas":
+    {"skillName": "SSAS",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": [] 
+    },
+"/skillpage-ssis":
+    {"skillName": "SSIS",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": [] 
+    },
+"/skillpage-ssrs":
+    {"skillName": "SSRS",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": [] 
+    },
+"/skillpage-swift": 
+    {"skillName": "Swift",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },  
+"/skillpage-tableau": 
+    {"skillName": "Tableau",
+        "skillPageDetail": "This was the primary reporting tool for the last 5 years of my employment at Geisinger Health System.  About 30% of a typical workday was spent creating building new reports for projects and maintaining/enhancing reports previously built.<br /><br />I am comfortable with designing and building large multi-workbook view tableau files.  I know how to incorporate parameters with functions that allow for hiding/unhiding sheets, filters and other objects from a given workbook view.  Also I understand the importance of when possible filters across workbook views be linked together so the user is not having to re-select the same values when they switch between workbook views.",
+        "Functionality": ["sheets and workbook views", "parameters", "filters", "functions", "data connections", "user access filtering"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-websitebuilders": 
+    {"skillName": "Website Builders",
+        "skillPageDetail": "SquareSpace:<br /><br />When SeeBeyond was migrating to an updated structure, I rebuilt the 50+ form questionaires found throughout the website.<br />Wix:<br /><br />My wife started her own consulting company Thriving Oak Consulting.  I created the page navigation functionality for the website.<br /><br />Wordpress:<br />On Jasmine Tours' website, I implemented a image scroller for the different destinationas as well as their blog page.",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-web3": 
+    {"skillName": "Web3 Blockchain Decentralized Apps",
+        "skillPageDetail": "During the course of 2 and half months in 2024, I completed the \"Web Development Bootcamp\" course on Udemy.  The last 10 hours introduced Web3 functionality.",
+        "Functionality": ["blockchain", "NFTs", "Dfinity", "motoko", "CandidUI"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "/images/Udemy Certificate - Web Development.png", 
+        "Additional Certifications": []
+    },
+"/skillpage-vba": 
+    {"skillName": "VBA",
+        "skillPageDetail": "Routine Reports Efficiency:<br />During the first 5 years of my employment at Geisinger Health System, Excel was the primary reporting tool.  I implemented SQL data connections and VBA scripts into all of my routine reports.  Using Windows task scheduler, the respective report file would be opened.  A workbook_open Subroutine would run, refresh the data connections (including one that executed a SQL stored procedure), update any formatting needs, save a copy of the file as an xlsx file, generate an outlook email, attach the xlsx file to the email and send to its respective recipients.<br /><br />Nurse Site List:<br />Historically this was managed by a co-worker in 2 SQL tables.  I built a vba front-end with a sql back-end of about 15 tables and 2 stored procedures.  The final product saved multiple back and forth emails per week with leadership requesting changes as well as provided leadership with visual documentation of current state they previously never had access to.  Leadership instead of sending emails can now open this macro enabled excel file and provide the necessary inputs for making the changes to the Nurse workload assignment without burdensome back and forth email communication.  Workbook_open Subroutine refreshes the data connects and brings up a form that allows them several options.  They can click a button to view a pdf of the current state, enter a new employee, assign an employee to workload assignment logic, or re-assign from one employee to another.  Workload assignment logic can be respective to the county, region, or pcpoffice of the patient.  Each selection made gets logged in a hidden data sheet and twice per week is extracted from the file, imported into SQL, and processed by SQL stored procedures via an automated process owned by the data analyst team.  When the stored procedures have applied the updates per these records, an email is generated to leadership showing the changes requested that were completed and the new current state of the workload assignment.<br /><br />Pivot Table printing functionality:<br />Reporting to leadership on NCQA HEDIS measures proved to be a difficult task.  Previous co-workers had explored using a variety of tools including Crystal Reports and Xcelsius.  Several issues were encountered though between the volume of the data to allow for drilling into detail level and printing functionality.  This was a challenging dataset to provide summarization of with 80+ measures, 6 insurance type breakouts, 3 years of month over month comparisons within each combination, and millions of rows of detail level.  The solution I developed on was based on several pivot tables built using data connections in excel.  This eliminated the file size issue with volume of records.  Then for the printing functionality, the user could click a button generating a form which allowed them to select which pivot table summaries, measures and insurance type breakouts they were interested in.  The script would then loop through their selections, export the excel sheets filtered one at a time into a pdf and print this pdf.",
+        "Functionality": ["workbook_open subroutine", "loops", "putting formulas into cells", "data connection refresh", "user access control", "forms", "export to pdf", "send outlook email", "attach file to outlook email", "paste cells into outlook email", "format range of cells based on value in the cell"],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": []
+    },
+"/skillpage-xml":
+    {"skillName": "XML",
+        "skillPageDetail": "",
+        "Functionality": [],
+        "Project Documentation": [],
+        "Video": "",
+        "Primary Certification": "", 
+        "Additional Certifications": [] 
+    }
+}

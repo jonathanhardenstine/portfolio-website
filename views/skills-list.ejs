@@ -1,0 +1,55 @@
+<%- include("partials/header.ejs") %>
+<div class="FlexColumn">
+    <div class="SkillTypeGrid">
+        <%- include("partials/skill-types.ejs") %>
+        <nav id="SkillNameCardsContainer">
+            <% if (skillCards.length > 0) {%>
+                <% skillCards.forEach((data) => { %>
+                    <div class="SkillNameCards">
+                        <% if (data.Training[0] == "Udemy course to be completed in 2025" || data.Training[0] == "TBD post-2025") { %>
+                        <%- '<a' + '" class="SkillNameCardsLink TrainingInProgress">' %>
+                        <% } else { %>
+                        <%- '<a href="' + data["skill_href"] + '" class="SkillNameCardsLink SkillNameCardTextColor">' %>
+                        <% } %>
+                            <div class="SkillNameSizing">
+                                <%= data["Skill Title"] %>
+                            </div>
+                            <div class="SkillCardSubTitles">
+                                <container class="SkillSpecificsSizing">
+                                    <%= data["Skill Specifics"] %>
+                                </container>
+                                <container class="FlexColumn SkillDescriptionSizing">
+                                    <% if (data["Skill Description"].length > 0) { %>
+                                        <% data["Skill Description"].forEach((description) => { %>
+                                            <span>
+                                                <%= description %>
+                                            </span>
+                                        <% }); %>
+                                    <% } %>
+                                </container>
+                                <% if (data["Training"].length > 0) { %>
+                                    <container class="TrainingDescription">
+                                        <div>
+                                            <label class="TrainingDescriptionUnderline">Training</label>:
+                                        </div>
+                                        <div class="FlexColumn">
+                                            <% data["Training"].forEach((training) => { %>
+                                                <span>
+                                                    <%= training %>
+                                                </span>
+                                            <% }); %>
+                                        </div>
+                                    </container>
+                                <% } else {%>
+                                    <container></container>
+                                <% } %>
+                            </div>
+                        </a>
+                    </div>
+                <% }); %>
+            <% } %>
+        </nav>
+    </div>
+    <%- include("partials/certifications.ejs", Certifications) %>
+</div>
+<%- include("partials/footer.ejs") %>

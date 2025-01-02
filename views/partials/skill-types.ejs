@@ -1,0 +1,39 @@
+<nav id="SkillsTypeNav" class="FlexColumn">
+    <% if(skillTypeData.length > 0) { %>
+        <% skillTypeData.forEach((skillType) => { %>
+            <% if(skillTypeName == skillType["skill_type_name"]) { %>
+                <container class="SkillTypeOuterBorder SkillTypeSelected">
+                    <div class="SkillTypeInnerBorder SkillTypeSelected">
+                        <%- '<a href="' + skillType["skill_type_href"] + '">' %>
+                            <% if (skillType["skill_type_display_text"].length > 0) { %>
+                                <div class="SimpleFlexWrapper">
+                                    <% skillType["skill_type_display_text"].forEach((display_text) => { %>
+                                        <%- '<div class="FlexColumn SkillTypeNameDisplay">' + display_text + '</div>' %>
+                                    <% }); %>
+                                </div>
+                            <% } %>
+                            <%- '<img src="' + skillType["skill_type_src"] + '" alt="' + skillType["skill_type_src_text"] + '"></img>' %>
+                        </a>
+                    </div>
+                </container>
+            <% } else { %>
+                <container class="Opaque">
+                    <container class="SkillTypeOuterBorder SkillTypeDefault">
+                        <div class="SkillTypeInnerBorder SkillTypeDefault">
+                            <%- '<a href="' + skillType["skill_type_href"] + '">' %>
+                                <% if (skillType["skill_type_display_text"].length > 0) { %>
+                                    <div class="SimpleFlexWrapper">
+                                        <% skillType["skill_type_display_text"].forEach((display_text) => { %>
+                                            <%- '<div class="FlexColumn SkillTypeNameDisplay">' + display_text + '</div>' %>
+                                        <% }); %>
+                                    </div>
+                                <% } %>
+                                <%- '<img src="' + skillType["skill_type_src"] + '"></img>' %>
+                            </a>
+                        </div>
+                    </container>
+                </container>
+            <% } %>
+        <% }); %>
+    <% } %>
+</nav>

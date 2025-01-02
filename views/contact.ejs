@@ -1,0 +1,165 @@
+<%- include("partials/header.ejs") %>
+<div id="ContactForm">
+  <div class="bd-example" id="ContactFormBackground">
+    <div id="ContactFormName">
+      Contact Form
+    </div>
+    <form> 
+      <div id="ContactFormLabelGrid">
+        <div class="ContactFormLabelPadding">
+          <label for="requestedProject" class="SimpleFlexWrapper">
+            Project Name
+            <p class="Opaque ContactFormRequiredLabelFormat">
+              (required)
+            </p>
+          </label>
+          <input type="text" class="form-control" id="requestedProject" placeholder="Project Name" required />
+        </div>
+        <div></div>
+        <div class="ContactFormLabelPadding">
+          <label for="requestorName" class="SimpleFlexWrapper">
+            Your Name
+            <p class="Opaque ContactFormRequiredLabelFormat">
+              (required)
+            </p>
+          </label>
+          <input type="text" class="form-control" id="requestorName" placeholder="First and Last Name" required />
+        </div>
+        <div class="ContactFormLabelPadding">
+          <label for="requestorEmail" class="SimpleFlexWrapper">
+            Email
+            <p class="Opaque ContactFormRequiredLabelFormat">
+              (required)
+            </p>
+          </label>
+          <input type="email" class="form-control" id="requestorEmail" placeholder="Email" required />
+        </div>
+        <div class="ContactFormLabelPadding">
+          <label for="requestorCompany">
+            Company You Work For (if applicable)
+          </label>
+          <input type="text" class="form-control" id="requestorCompany" placeholder="Company Name" />
+        </div>
+        <div class="ContactFormLabelPadding">
+          <label for="requestorPosition">
+            Your Position (if applicable)
+          </label>
+          <input type="text" class="form-control" id="requestorPosition" placeholder="Job Title" />
+        </div>
+      </div>
+      <div class="ContactFormLabelPadding">
+        <div>
+          What type of work does your project need?
+        </div>
+        <div class="ContactFormCheckboxGrid">
+          <% SkillTypes.forEach((skilltype, index) => { %>
+            <div class="form-check">
+              <%- '<input class="form-check-input" type="checkbox" id="skillTypeCheck' + index + '" name="SkillTypeCheckbox" />' %>
+                <%- '<label class="form-check-label" for="skillTypeCheck' + index + '">' %>
+                <%= skilltype %>
+              </label>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="ContactFormLabelPadding">
+        <div>
+          Which of my skillsets are most pertinent to this project?
+        </div>
+        <div class="ContactFormCheckboxGrid">
+          <% SkillPages.forEach((skill, index) => { %>
+            <% if (ShowSkill[index] == "Yes") { %>
+              <div class="form-check">
+                <%- '<input class="form-check-input" type="checkbox" id="skillCheck' + index + '" name="SkillCheckbox" />' %>
+                <%- '<label class="form-check-label" for="skillCheck' + index + '">' %>
+                  <%= skill %>
+                </label>
+              </div>
+            <% } %>
+          <% }); %>
+        </div>
+      </div>
+      <div class="ContactFormLabelPadding">
+        <button type="submit" onclick="sendEmail()" class="btn btn-primary">
+          Submit Request
+        </button>
+      </div>
+    </form>
+    <%- '<h5 id="' + emailJS_SubmitID + '" hidden>' %>
+      <%= emailJS_SubmitText %>
+    </h5>
+  </div>
+</div>
+<script type="text/javascript">
+  //when the contact page is loaded/manually refreshed, leave the h5 element hidden
+  //when the form submits, wait 8 seconds and reload the contact page so the request query is empty
+  if ("<%= emailJS_SubmitID %>" != "Default") {
+    $("#<%= emailJS_SubmitID %>").removeAttr('hidden');
+    setTimeout(function() {
+      window.location.replace("/contact");
+    }, 8000); //8 seconds
+  }
+
+  $(document).ready(function() {
+    $('form').on('submit', function(event) {
+      event.preventDefault();
+      var i;
+      var skilltypeschecked = "";
+      var skillschecked = "";
+
+      var skilltypes = document.getElementsByName("SkillTypeCheckbox");
+      for (i = 0; i < skilltypes.length; i++) {
+        if (skilltypes[i].checked == true) {
+          if (skilltypeschecked == "") {
+            skilltypeschecked = skilltypes[i].parentElement.textContent.trim();
+          } else {
+            skilltypeschecked = skilltypeschecked + ", " + skilltypes[i].parentElement.textContent.trim();
+          }
+        };  
+      }
+      
+      var skills = document.getElementsByName("SkillCheckbox");
+      for (i = 0; i < skills.length; i++) {
+        if (skills[i].checked == true) {
+          if (skillschecked == "") {
+            skillschecked = skills[i].parentElement.textContent.trim();
+          } else {
+            skillschecked = skillschecked + ", " + skills[i].parentElement.textContent.trim();
+          }
+        };  
+      }
+
+      const emailjs_template_params = 
+        {"projectName": document.getElementById("requestedProject").value.length == 0 ? "not entered" : document.getElementById("requestedProject").value,
+          "projectSkillTypes": skilltypeschecked == "" ? "none selected" : skilltypeschecked,
+          "projectSkillSets": skillschecked == "" ? "none selected" : skillschecked,
+          "requestorEmail": document.getElementById("requestorEmail").value.length == 0 ? "not entered" : document.getElementById("requestorEmail").value,
+          "requestorName": document.getElementById("requestorName").value.length == 0 ? "not entered" : document.getElementById("requestorName").value,
+          "requestorCompany": document.getElementById("requestorCompany").value.length == 0 ? "not entered" : document.getElementById("requestorCompany").value,
+          "requestorPosition": document.getElementById("requestorPosition").value.length == 0 ? "not entered" : document.getElementById("requestorPosition").value
+        };
+
+      if (emailjs_template_params["projectName"] != "not entered" && 
+          emailjs_template_params["requestorEmail"] != "not entered" && 
+          emailjs_template_params["requestorName"] != "not entered") {
+        var data = {
+          service_id: "<%=EmailJS_Service_ID%>",
+          template_id: "<%=EmailJS_Template_ID%>",
+          user_id: "<%=EmailJS_Public_Key%>",
+          template_params: emailjs_template_params
+        };
+            
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+          type: 'POST',
+          data: JSON.stringify(data),
+          contentType: 'application/json'
+        }).done(function() {
+          window.location.replace("/contact?Success=SUCCESS!!!");
+        }).fail(function(error) {
+          window.location.replace("/contact?Failed=FAILED..." + error);
+        });
+      }
+    });
+  });
+</script>
+<%- include("partials/footer.ejs") %>

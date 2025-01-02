@@ -1,0 +1,7 @@
+<% if (Certifications.length > 0) { %>
+    <div class="CertificationPositioning">
+        <% Certifications.forEach((certification) => { %>
+            <%- '<img src="' + certification + '" class="CertificationImg">' %>
+        <% }); %>
+    </div>
+<% } %>

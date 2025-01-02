@@ -1,0 +1,61 @@
+<%- include("partials/header.ejs") %>
+<div class="FlexColumn">
+    <div class="SkillTypeGrid">
+        <%- include("partials/skill-types.ejs") %>
+        <container style="padding: 5px 10%">
+            <% if (skillName.length > 0) { %>
+                <%- '<h2 style="text-align: center;">' + skillName + '</h2>' %>
+                <% if (skillPageDetail.length > 0) { %>
+                    <%- '<h6>' + skillPageDetail + '</h6>' %>
+                <% } %>
+                <% if (Functionality.length > 0) { %>
+                    <div>
+                        I am knowledgeable about functionality including but not limited to the below:
+                    </div>
+                    <container style="display: flex; flex-direction: row; width: 100%; justify-content: space-between;"> 
+                        <ul>
+                            <% Functionality.forEach((item) => { %>
+                                <li>
+                                    <%= item %>
+                                </li>
+                            <% }); %>
+                        </ul>   
+                        <% if (CertificationPrimary == "N/A" && (Video.length > 0 || ProjectDocumentation.length > 0)) { %>
+                            <% ProjectDocumentation.forEach((document) => { %>
+                                <div name="Carousel" style="width: 60%; height: 400px">
+                                    <%- '<h6 class="ProjectDocumentationDesc">' + document["description"] + '</h6>' %>
+                                    <%- '<img src="' + document["image"] + '" class="ProjectDocumentationImg" alt="' + document["description"] + '">' %>
+                                </div>
+                            <% }); %>
+                            <video width="205px" height="443px" controls autoplay loop>
+                                <%- '<source src="' + Video + '" type="video/mp4">' %>
+                            </video>
+                        <% } else { %>
+                            <div class="PrimaryCertificationImg">
+                                <%- '<img src="' + CertificationPrimary + '">' %>
+                            </div>
+                        <% } %>
+                    </container>
+                <% } %>
+            <% } %>
+        </container>
+    </div>
+    <%- include("partials/certifications.ejs", {"Certifications": CertificationsAddtl}) %>
+</div>
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByName("Carousel");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 6000); // Change image every 6 seconds
+    }
+</script>
+<%- include("partials/footer.ejs") %>
