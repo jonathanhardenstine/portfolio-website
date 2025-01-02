@@ -156,7 +156,7 @@
         }).done(function() {
           window.location.replace("/contact?Success=SUCCESS!!!");
         }).fail(function(error) {
-          window.location.replace("/contact?Failed=FAILED..." + error);
+          window.location.replace("/contact?Failed=FAILED..." + JSON.stringify(error));
         });
       }
     });
