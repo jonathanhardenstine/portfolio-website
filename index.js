@@ -8,8 +8,8 @@ import skill_types_json from "./assets/json/skill_types.json" assert {type: "jso
 import skills_list_json from "./assets/json/skills_list.json" assert {type: "json"}
 
 const app = express();
-const Host = "0.0.0.0";
-const port = 10000;
+const host = "0.0.0.0";
+const PORT = 10000;
 //const localport = 3000;
 env.config();
 
