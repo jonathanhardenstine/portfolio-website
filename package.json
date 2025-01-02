@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -21,6 +22,7 @@
     "jsdom": "^25.0.1",
     "moment": "^2.30.1",
     "node": "^20.18.1",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "npm-start": "^1.4.2"
   }
 }
