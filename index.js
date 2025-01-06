@@ -57,16 +57,6 @@ function setContactPageVariables(submitID, submitText, res) {
     res.render("contact.ejs", data);
 }
 
-// if (JSON.stringify(req.query) === "{}") {
-//     setContactPageVariables("Default", "Hidden", res);
-// } else if (req.query.Success) {
-//     setContactPageVariables("Success", req.query.Success, res);
-// } else if (req.query.Failed) {
-//     setContactPageVariables("Failed", req.query.Failed, res);
-// } else {
-//     setContactPageVariables("Failed", "ERROR...Unable to Send", res);
-// }
-    
 app.get("/contact", (req, res) => {
     if (JSON.stringify(req.query) === "{}") {
         setContactPageVariables("Default", "Hidden", res);
@@ -78,33 +68,6 @@ app.get("/contact", (req, res) => {
         setContactPageVariables("Failed", "ERROR...Unable to Send", res);
     }
 });
-
-
-// app.get("/contact", (req, res) => {
-//     console.log(req.query);
-//     if (JSON.stringify(req.query) === "{}") {
-//         setContactPageVariables("Default", "Hidden", res);
-//     } else if (req.query.FormSubmitted) {
-//         var data = {
-//             service_id: 'service_71ci4u4',
-//             template_id: 'template_p1utgqa',
-//             user_id: 'XW4n4PqJYrg-SBztK',
-//             template_params: req.query.FormSubmitted
-//         };
-        
-//         ajax('https://api.emailjs.com/api/v1.0/email/send', {
-//             type: 'POST',
-//             data: JSON.stringify(data),
-//             contentType: 'application/json'
-//         }).done(function() {
-//             setContactPageVariables("Success", "SUCCESS!!!", res);
-//         }).fail(function(error) {
-//             setContactPageVariables("Failed", "ERROR..." + error, res);
-//         });
-//     } else {
-//         setContactPageVariables("Failed", "ERROR...Unable to Send", res);
-//     }
-// });
 
 ///////////////////
 // skills routing
@@ -145,37 +108,6 @@ app.get("/skillslist-*", (req, res) => {
     
     res.render("skills-list.ejs", data[req.path]);
 });
-
-// function setSkillsListPageVariables (skillTypeValue, certicationsValue, res) {
-//     const data = {
-//         "pageTitle": "Skills",
-//         "UpdatedDate": moment().format('YYYY'),
-//         "skillTypeName": skillTypeValue,
-//         "skillTypeData": skill_types_json,
-//         "skillCards": skills_list_json[skillTypeValue],
-//         "Certifications": certicationsValue
-//     };
-
-//     res.render("skills-list.ejs", data);
-// }
-
-// app.get("/skillslist-*", (req, res) => {
-//     if (req.path === "/skillslist-analytics") {
-//         const setCertificationsValue = ["/images/Career Certification - Data Analyst Associate.png",
-//             "images/Career Certification - Data Engineer Associate.png",
-//             "/images/Technology Certification - SQL Associate.png"];
-//         setSkillsListPageVariables("Data Analytics", setCertificationsValue, res);
-//     } else if (req.path === "") {
-//         const setCertificationsValue = [];
-//         setSkillsListPageVariables("Database Architecture", setCertificationsValue, res);
-//     } else if (req.path === "") {
-//         const setCertificationsValue = [];
-//         setSkillsListPageVariables("Website Development", setCertificationsValue, res);
-//     } else if (req.path === "") {
-//         const setCertificationsValue = [];
-//         setSkillsListPageVariables("Software Development", setCertificationsValue, res);
-//     }
-// });
 
 ///////////////////
 // individual skill page routing

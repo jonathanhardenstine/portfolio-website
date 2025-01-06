@@ -6,7 +6,7 @@
     </div>
     <form> 
       <div id="ContactFormLabelGrid">
-        <div class="ContactFormLabelPadding">
+        <div class="ContactFormTopPadding ContactFormRightPadding">
           <label for="requestedProject" class="SimpleFlexWrapper">
             Project Name
             <p class="Opaque ContactFormRequiredLabelFormat">
@@ -16,7 +16,7 @@
           <input type="text" class="form-control" id="requestedProject" placeholder="Project Name" required />
         </div>
         <div></div>
-        <div class="ContactFormLabelPadding">
+        <div class="ContactFormTopPadding ContactFormRightPadding">
           <label for="requestorName" class="SimpleFlexWrapper">
             Your Name
             <p class="Opaque ContactFormRequiredLabelFormat">
@@ -25,7 +25,7 @@
           </label>
           <input type="text" class="form-control" id="requestorName" placeholder="First and Last Name" required />
         </div>
-        <div class="ContactFormLabelPadding">
+        <div class="ContactFormTopPadding ContactFormRightPadding">
           <label for="requestorEmail" class="SimpleFlexWrapper">
             Email
             <p class="Opaque ContactFormRequiredLabelFormat">
@@ -34,20 +34,20 @@
           </label>
           <input type="email" class="form-control" id="requestorEmail" placeholder="Email" required />
         </div>
-        <div class="ContactFormLabelPadding">
+        <div class="ContactFormTopPadding ContactFormRightPadding">
           <label for="requestorCompany">
             Company You Work For (if applicable)
           </label>
           <input type="text" class="form-control" id="requestorCompany" placeholder="Company Name" />
         </div>
-        <div class="ContactFormLabelPadding">
+        <div class="ContactFormTopPadding ContactFormRightPadding">
           <label for="requestorPosition">
             Your Position (if applicable)
           </label>
           <input type="text" class="form-control" id="requestorPosition" placeholder="Job Title" />
         </div>
       </div>
-      <div class="ContactFormLabelPadding">
+      <div class="ContactFormTopPadding">
         <div>
           What type of work does your project need?
         </div>
@@ -62,7 +62,7 @@
           <% }); %>
         </div>
       </div>
-      <div class="ContactFormLabelPadding">
+      <div class="ContactFormTopPadding">
         <div>
           Which of my skillsets are most pertinent to this project?
         </div>
@@ -79,7 +79,7 @@
           <% }); %>
         </div>
       </div>
-      <div class="ContactFormLabelPadding">
+      <div class="ContactFormTopPadding">
         <button type="submit" onclick="sendEmail()" class="btn btn-primary">
           Submit Request
         </button>

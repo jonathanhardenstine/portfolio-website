@@ -1,13 +1,8 @@
 .gradient-background {
-  background: linear-gradient(270deg, #144272, #2C74B3, #144272);
+  background: linear-gradient(270deg, #9cbef1, #F7F9FC, #9cbef1);
   background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+  animation: gradient-animation 10s ease infinite;
   font-family: "Nuosu SIL", sans-serif;
-}
-
-.gradient-textcolor {
-  color: linear-gradient(270deg, rgb(165, 246, 165), rgb(250, 250, 165), rgb(250, 148, 148));
-  animation: gradient-animation 18s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -22,16 +17,12 @@
   }
 }
 
-hr {
-  position: relative;
-  border: none;
-  height: 12px;
-  background: whitesmoke;
-  margin: 1vh 0vh;
+body {
+  color: #212529;
 }
 
 a:hover {
-  color: #EDF1D6;
+  color: #007BFF;
 }
 
 #title {
@@ -45,79 +36,38 @@ a:hover {
   padding: 5px 20px;
 }
 
-#ContactForm {
-  padding: 0rem 3rem;
-  font-size: 2.5vh;
-
-  #ContactFormBackground {
-    height:100%; 
-    background-color: rgb(203, 218, 237);
-    padding-top: 0.5rem;
-
-    #ContactFormName {
-      text-decoration: underline;
-      font-size: 3vh;
-    }
-
-    #ContactFormLabelGrid {
-      display: grid;
-      flex: 1;
-      grid-template-columns: 50% 50%;
-    }
-
-    .ContactFormLabelPadding {
-      padding-right: 15vw;
-      padding-top: 10px;
-
-      button {
-        font-size: 2.5vh;
-      }
-
-      input {
-        font-size: 2.5vh;
-      }
-
-      .ContactFormRequiredLabelFormat {
-        padding-left: 5px;
-        margin: 0px;
-      }
-    }
-    
-    .ContactFormCheckboxGrid {
-      display: grid; 
-      flex: 1; 
-      grid-template-columns: 25% 25% 25% 25%;
-    }
-
-    #Success {
-      color: green;
-    }
-
-    #Failed {
-      color: red;
-    }
-  }
-}
-
 #MainPageNav {
   display: flex; 
+  align-items: center;
   justify-content: space-evenly;
+  background-color: #212529;
+  height: 6vh;
 }
 
 #Footer {
   justify-content: flex-end; 
+  align-items: center;
   display: flex; 
   padding-right: 10px; 
-  font-size: 14px
+  font-size: 14px;
+  color: #F7F9FC;
+  background-color: #212529;
+  height: 5vh;
+
+  img {
+    height: 25px;
+    width: 15px;
+  }
 }
 
 .NavActive {
-  color: #43a2f6;
+  color: #007BFF;
   text-decoration: underline;
+  font-weight: 600;
 }
 
 .NavDefault {
-  color: black;
+  color: #F7F9FC;
   text-decoration: none;
 }
 
@@ -131,7 +81,7 @@ a:hover {
 }
 
 .PageViewHeight {
-  height: 85vh
+  height: 89vh
 }
 
 .SimpleFlexWrapper {
@@ -152,8 +102,6 @@ a:hover {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 100%;
-  /* border-radius: 15px;
-  border: 4px solid black; */
 }
 
 #SkillsTypeNav {
@@ -194,31 +142,47 @@ a:hover {
 }
 
 .SkillTypeSelected {
-  border-top: 4px solid #43a2f6;
-  border-bottom: 4px solid #43a2f6;
+  border-top: 4px solid #007BFF;
+  border-bottom: 4px solid #007BFF;
 
   a {
-    color: #43a2f6;
+    color: #007BFF;
+    font-weight: 600;
     text-decoration: none;
     align-items: center;
 
     img {
-      background-color: #43a2f6;
+      background-color: #007BFF;
     }
   }
 }
 
 .SkillTypeDefault {
-  border-top: 4px solid #0A2647;
-  border-bottom: 4px solid #0A2647;
+  border-top: 4px solid #6C757D;
+  border-bottom: 4px solid #6C757D;
 
   a {
-    color: black;
+    color: #6C757D;
     text-decoration: none;
     align-items: center;
 
     img {
-      background-color: #0A2647;
+      background-color: #6C757D;
+    }
+  }
+}
+
+.SkillTypeDefault:hover {
+  border-top: 4px solid #007BFF;
+  border-bottom: 4px solid #007BFF;
+
+  a {
+    color: #007BFF;
+    text-decoration: none;
+    align-items: center;
+
+    img {
+      background-color: #007BFF;
     }
   }
 }
@@ -227,7 +191,7 @@ a:hover {
   height: 100%; 
   justify-content: center; 
   padding: 0px 4px;
-  font-size: 2.75vh;
+  font-size: 1.3vw;
 }
 
 #SkillNameCardsContainer {
@@ -244,19 +208,18 @@ a:hover {
     width: 30%;
     text-align: center;
     border-radius: 15px;
+    background-color: #c1d7f8;
 
     .SkillNameCardTextColor {
-      color: black;
-      border: 0.5px solid #43a2f6;
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      color: #212529;
+      box-shadow: 0 1rem 3rem #6C757D;
       border-radius: 15px;
     }
 
     .TrainingInProgress {
-      color: #0A2647;
-      background-color: #0a26475c;
-      border: 0.5px solid #0a26475c;
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      color: #495057;
+      background-color: #6C757D;
+      box-shadow: 0 1rem 3rem #6C757D;
       border-radius: 15px;
     }
   
@@ -269,7 +232,8 @@ a:hover {
 
       .SkillNameSizing {
         text-decoration: underline; 
-        font-size: 2.6vh;
+        font-size: 1.5vw;
+        font-weight: 600;
       }
 
       .SkillCardSubTitles {
@@ -282,19 +246,18 @@ a:hover {
         
         .SkillSpecificsSizing {
           text-align: center; 
-          font-size: 2.2vh;
+          font-size: 1.2vw;
         }
 
         .SkillDescriptionSizing {
-          font-size: 1.9vh; 
-          overflow: ellipsis;
+          font-size: 0.85vw; 
         }
       
         .TrainingDescription {
           display: grid;
           flex: 1;
           grid-template-columns: 20% 80%;
-          font-size: 2vh;
+          font-size: 1vw;
 
           .TrainingDescriptionUnderline {
             text-decoration: underline;
@@ -306,7 +269,7 @@ a:hover {
 }
 
 .SkillNameCardTextColor:hover {
-  background-color: #43a2f6;
+  background-color: #007BFF;
 }
 
 .CertificationPositioning {
@@ -319,30 +282,30 @@ a:hover {
     width: 30%;
     height: auto;
     background-size: 30%;
+    box-shadow: 0 1rem 3rem #6C757D;
   }
 }
 
 .ProjectDocumentationDesc {
   text-align: center; 
   text-decoration: underline;
-  background-color: #2C74B3;
   border-radius: 22px;
-  border: 1px solid #43a2f6;
+  border: 1px solid #6C757D;
   margin-bottom: 2px;
 }
 
 .ProjectDocumentationImg {
   width: 100%;
   height: 400px;
-  background-color: #2C74B3;
   border-radius: 22px;
-  border: 1px solid #43a2f6;
   padding: 6px;
+  box-shadow: 0 1rem 3rem #6C757D;
 }
 
 video {
   object-fit: cover;
   border-radius: 22px;
+  box-shadow: 0 1rem 3rem #6C757D;
   }
 
 .PrimaryCertificationImg {
@@ -350,8 +313,72 @@ video {
   display: flex; 
   flex-direction: column; 
   justify-content: center;
+  box-shadow: 0 1rem 3rem #6C757D;
 
   img {
     width: 100%;
   }
 }
+
+
+#ContactForm {
+  padding: 0rem 3rem;
+  font-size: 1vw;
+
+  #ContactFormBackground {
+    height: 100%; 
+    background-color: rgb(203, 218, 237);
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+    margin: 0px;
+
+    #ContactFormName {
+      text-decoration: underline;
+      font-size: 1.7vmax;
+    }
+
+    #ContactFormLabelGrid {
+      display: grid;
+      flex: 1;
+      grid-template-columns: 50% 50%;
+    }
+
+    .ContactFormTopPadding {
+      padding-top: 10px;
+    }
+
+    .ContactFormRightPadding {
+      padding-right: 15vw;
+    }
+
+    button {
+      font-size: 1.2vmax;
+    }
+
+    input {
+      font-size: 1.1vmax;
+    }
+
+    .ContactFormRequiredLabelFormat {
+      padding-left: 5px;
+      margin: 0px;
+    }
+  
+    .ContactFormCheckboxGrid {
+      display: grid; 
+      flex: 1; 
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    #Success {
+      color: green;
+    }
+
+    #Failed {
+      color: red;
+    }
+  }
+}
+
+
+/* under 460 width */

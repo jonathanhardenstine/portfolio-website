@@ -1,6 +1,6 @@
 [{"skill_type_name": "Data Analytics",
         "skill_type_href": "/skillslist-analytics",
-        "skill_type_display_text": ["Data<br />Analyst", "/", "Data<br />Engineer"],
+        "skill_type_display_text": ["Data<br />Analytics", "/", "Data<br />Engineering"],
         "skill_type_src": "/images/graph-up.svg",
         "skill_type_src_text": "Line Graph Icon"},
 {"skill_type_name": "Database Architecture",
