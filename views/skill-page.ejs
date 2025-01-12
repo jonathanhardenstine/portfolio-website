@@ -2,17 +2,18 @@
 <div class="FlexColumn">
     <div class="SkillTypeGrid">
         <%- include("partials/skill-types.ejs") %>
-        <container style="padding: 5px 10%">
+        <container class="SkillPage">
             <% if (skillName.length > 0) { %>
-                <%- '<h2 style="text-align: center;">' + skillName + '</h2>' %>
+                <%- '<h2 class="SkillPageTitle">' + skillName + '</h2>' %>
                 <% if (skillPageDetail.length > 0) { %>
-                    <%- '<h6>' + skillPageDetail + '</h6>' %>
+                    <%- '<div>' + skillPageDetail + '</div>' %>
                 <% } %>
                 <% if (Functionality.length > 0) { %>
+                    <br />
                     <div>
                         I am knowledgeable about functionality including but not limited to the below:
                     </div>
-                    <container style="display: flex; flex-direction: row; width: 100%; justify-content: space-between;"> 
+                    <container class="SkillPageListItems"> 
                         <ul>
                             <% Functionality.forEach((item) => { %>
                                 <li>
@@ -22,7 +23,7 @@
                         </ul>   
                         <% if (Video.length > 0 || ProjectDocumentation.length > 0) { %>
                             <% ProjectDocumentation.forEach((document) => { %>
-                                <div name="Carousel" style="width: 60%; height: 400px">
+                                <div class="Carousel">
                                     <%- '<h6 class="ProjectDocumentationDesc">' + document["description"] + '</h6>' %>
                                     <%- '<img src="' + document["image"] + '" class="ProjectDocumentationImg" alt="' + document["description"] + '">' %>
                                 </div>
@@ -50,7 +51,7 @@
     
     function carousel() {
       var i;
-      var x = document.getElementsByName("Carousel");
+      var x = document.getElementsByClassName("Carousel");
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";  
       }
