@@ -4,7 +4,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-aws": 
@@ -13,7 +13,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-azure": 
@@ -22,7 +22,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-crystal": 
@@ -31,7 +31,7 @@
         "Functionality": ["paramenters", "formulas", "database connections", "crosstabs", "subreports", "conditional formatting", "user access filtering"],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-csshtml": 
@@ -49,7 +49,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-c#": 
@@ -58,7 +58,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-c++": 
@@ -67,7 +67,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },  
 "/skillpage-docker": 
@@ -76,7 +76,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-excel": 
@@ -85,12 +85,12 @@
         "Functionality": ["formulas (including vlookup, indirect, if, sumif, ect.)", "pivot tables", "charts", "database connections", "drop down lists", "conditional formatting", "print area", "freeze panes", "hidden sheets", "password lock"],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-flutter": 
     {"skillName": "Flutter SDK and Dart",
-        "skillPageDetail": "In 2019, I ideated a phone app for the youth group at my church, completed training and developed it to the point of deploying versions on both iOS TestFlight and Android Internal Test Track.  In 2021, I stopped work on the project due to scope and change in personal priorities.<br /><br />I designed the initial mock wireframe in Adobe XD, after which I then completed a 30 hour training in Udemy.  The Firebase backend was implemented 3 months after starting development.  I also managed a Milestone and Product Backlog tracker document as well as parsed the json Firebase data into a relational SQL database model.",
+        "skillPageDetail": "In 2019, I ideated a phone app, completed training and developed it to the point of deploying versions on both iOS TestFlight and Android Internal Test Track.  In 2021, I stopped work on the project due to scope and change in personal priorities.<br /><br />I designed the initial mock wireframe in Adobe XD, after which I then completed a 30 hour training in Udemy.  The Firebase backend was implemented 3 months after starting development.  I also managed a Milestone and Product Backlog tracker document as well as parsed the json Firebase data into a relational SQL database model.",
         "Functionality": ["classes, widgets, providers", "async", "iterables", "state", "push named routes", "REST APIs", "json decode and encode", "indexWhere", "removeAt", "sort", "compareTo", "where", "groupBy", "authentication", "function parameters", "notifyListeners", "inkwell"],
         "Project Documentation": 
             [{"description": "App Screens<br />(Completed Tasks vs All Tasks)", "image": "/images/Phone App Tasks by Screen.png"}, 
@@ -109,7 +109,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-go": 
@@ -118,7 +118,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },    
 "/skillpage-java": 
@@ -127,7 +127,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-js": 
@@ -141,11 +141,11 @@
     },
 "/skillpage-nosql": 
     {"skillName": "NoSQL",
-        "skillPageDetail": "Firebase:<br />In 2020, I implement Firebase as the backend for a phone app I was building for my church youth group.  It was my first exposure to a NoSQL environment.  I also exported the data and used MySQL to develop a relational model of the data.<br /><br />JSON:<br />In 2022, the company I was working for (Geisinger Health System) contracted with a new vendor for their Care Managment documentation platform.  The vendor was a small start up and it turned out they did not have a data model nor data feed to provide us.  We ended up agreeing to receiving raw JSON files.  I worked with the DBA on my team to develop the relational model.  As the vendor made updates to their platform without notifying us regarding the back-end impact, I would identify changes to the JSON object structures, discuss with the vendor, and then work with our DBA to apply the necessary updates to relational model.",
+        "skillPageDetail": "Firebase:<br />In 2020, I implemented Firebase as the backend for a phone app I was building.  It was my first exposure to a NoSQL environment.  I also exported the data and used MySQL to develop a relational model of the data.<br /><br />JSON:<br />In 2022, the company I was working for (Geisinger Health System) contracted with a new vendor for their Care Managment documentation platform.  The vendor was a small start up and it turned out they did not have a data model nor data feed to provide us.  We ended up agreeing to receiving raw JSON files.  I worked with the DBA on my team to develop the relational model.  As the vendor made updates to their platform without notifying us regarding the back-end impact, I would identify changes to the JSON object structures, discuss with the vendor, and then work with our DBA to apply the necessary updates to relational model.",
         "Functionality": ["authentication", "JSON parsing", "lists", "object keys and values"],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-php": 
@@ -154,7 +154,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },  
 "/skillpage-powerbi": 
@@ -163,7 +163,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-python": 
@@ -181,7 +181,7 @@
         "Functionality": ["functions", "stored procedures", "tables", "metadata", "users", "roles", "servers", "primary keys", "foreign keys", "indexes"],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": ["/images/Training Completion - SQL for Database Administrators.png","/images/Training Completion - SQL Data Engineer Associate.png"]
     },
 "/skillpage-sql": 
@@ -190,7 +190,7 @@
         "Functionality": ["select, from, where, group by, order by", "like, in, having", "left, right, inner joins", "drop, create, insert into", "case statements", "aliases", "CTEs", "embbedded queries", "functions, stored procedures, parameters", "views", "meta data", "window functions", "indexing", "loops", "dynamic sql", "pivot and unpivot", "if exists", "union and except"],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": ["/images/Training Completion - SQL Data Engineer Associate.png", "/images/Training Completion - Data Analyst Associate.png"]
     },
 "/skillpage-ssas":
@@ -199,7 +199,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": [] 
     },
 "/skillpage-ssis":
@@ -208,7 +208,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": [] 
     },
 "/skillpage-ssrs":
@@ -217,7 +217,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": [] 
     },
 "/skillpage-swift": 
@@ -226,7 +226,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },  
 "/skillpage-tableau": 
@@ -235,7 +235,7 @@
         "Functionality": ["sheets and workbook views", "parameters", "filters", "functions", "data connections", "user access filtering"],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-websitebuilders": 
@@ -244,7 +244,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-web3": 
@@ -262,7 +262,7 @@
         "Functionality": ["workbook_open subroutine", "loops", "putting formulas into cells", "data connection refresh", "user access control", "forms", "export to pdf", "send outlook email", "attach file to outlook email", "paste cells into outlook email", "format range of cells based on value in the cell"],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": []
     },
 "/skillpage-xml":
@@ -271,7 +271,7 @@
         "Functionality": [],
         "Project Documentation": [],
         "Video": "",
-        "Primary Certification": "", 
+        "Primary Certification": "N/A", 
         "Additional Certifications": [] 
     }
 }
