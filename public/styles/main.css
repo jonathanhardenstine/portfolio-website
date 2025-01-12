@@ -25,23 +25,17 @@ a:hover {
   color: #007BFF;
 }
 
-#title {
-  font-family: "Tilt Prism", sans-serif;
-  text-align: center;
-  font-weight: 600;
-  font-size: 9vh;
-}
-
-#AboutText {
-  padding: 5px 20px;
-}
-
 #MainPageNav {
   display: flex; 
   align-items: center;
   justify-content: space-evenly;
   background-color: #212529;
   height: 6vh;
+}
+
+#FooterBuffer {
+  filter: opacity(0%); 
+  height: 15px;
 }
 
 #Footer {
@@ -53,6 +47,9 @@ a:hover {
   color: #F7F9FC;
   background-color: #212529;
   height: 5vh;
+  position:fixed;
+  bottom:0;
+  width: 100%;
 
   img {
     height: 25px;
@@ -80,22 +77,42 @@ a:hover {
   filter: opacity(60%);
 }
 
-.PageViewHeight {
-  height: 89vh
-}
-
 .SimpleFlexWrapper {
   display: flex;
 }
 
-.HomePage {
+.CenterVertHoriz {
   align-items: center;
   justify-content: center;
 }
 
+#HomePageBuffer {
+  height: 5vh;
+  filter: opacity(0%); 
+}
+
 #HomeImg {
-  height: 30%; 
-  background-size: 30%; 
+  height: 26vh; 
+  width: 12vw;
+}
+
+h1 {
+    font-family: "Tilt Prism", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 9vh;
+}
+
+h6 {
+  font-size: 2.9vh;
+}
+
+h5 {
+  font-size: 3.4vh;
+}
+
+h4 {
+  font-size: 4.2vh;
 }
 
 .SkillTypeGrid {
@@ -320,13 +337,25 @@ video {
   }
 }
 
+#AboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 5vw 0vh 5vw;
+  font-size: 2.7vmin;
+}
 
 #ContactForm {
   padding: 0rem 3rem;
   font-size: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 
   #ContactFormBackground {
-    height: 100%; 
+    height: fit-content; 
+    width: fit-content;
     background-color: rgb(203, 218, 237);
     padding-top: 0.5rem;
     padding-bottom: 2.5rem;
@@ -380,5 +409,7 @@ video {
   }
 }
 
-
-/* under 460 width */
+ 
+ @media (max-width: 460px) {
+  
+ }
