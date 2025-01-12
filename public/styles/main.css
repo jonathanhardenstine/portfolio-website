@@ -36,6 +36,11 @@ a:hover {
   width: 100%;
 }
 
+#FooterBuffer {
+  filter: opacity(0%); 
+  height: 15px;
+}
+
 #Footer {
   justify-content: flex-end; 
   align-items: center;
@@ -486,3 +491,4 @@ h4 {
     }
   }
 }
+
