@@ -25,6 +25,10 @@ a:hover {
   color: #007BFF;
 }
 
+#NavBuffer {
+  height: 8vh;
+}
+
 #MainPageNav {
   display: flex; 
   align-items: center;
@@ -37,8 +41,7 @@ a:hover {
 }
 
 #FooterBuffer {
-  filter: opacity(0%); 
-  height: 15px;
+  height: 7vh;
 }
 
 #Footer {
@@ -50,7 +53,7 @@ a:hover {
   color: #F7F9FC;
   background-color: #212529;
   height: 5vh;
-  position:fixed;
+  position: fixed;
   bottom:0;
   width: 100%;
   font-size: 2.5vh;
@@ -77,10 +80,6 @@ a:hover {
   flex-direction: column;
 }
 
-.Opaque {
-  filter: opacity(60%);
-}
-
 .SimpleFlexWrapper {
   display: flex;
 }
@@ -90,12 +89,8 @@ a:hover {
   justify-content: center;
 }
 
-#HomePageBuffer {
-  height: 5vh;
-  filter: opacity(0%); 
-}
-
 #HomeImg {
+  margin-top: 10vh;
   height: auto; 
   width: 12vw;
 }
@@ -179,31 +174,31 @@ h4 {
 }
 
 .SkillTypeDefault {
-  border-top: 4px solid #6C757D;
-  border-bottom: 4px solid #6C757D;
+  border-top: 4px solid #8495AB;
+  border-bottom: 4px solid #8495AB;
 
   a {
-    color: #6C757D;
+    color: #8495AB;
     text-decoration: none;
     align-items: center;
 
     img {
-      background-color: #6C757D;
+      background-color: #8495AB;
     }
   }
 }
 
 .SkillTypeDefault:hover {
-  border-top: 4px solid #007BFF;
-  border-bottom: 4px solid #007BFF;
+  border-top: 4px solid #56a1f2;
+  border-bottom: 4px solid #56a1f2;
 
   a {
-    color: #007BFF;
+    color: #56a1f2;
     text-decoration: none;
     align-items: center;
 
     img {
-      background-color: #007BFF;
+      background-color: #56a1f2;
     }
   }
 }
@@ -256,12 +251,12 @@ h4 {
       }
 
       .SkillCardSubTitles {
-        padding: 5px;
+        padding: 0px 5px 5px 5px;
         text-align: left;
         font-size: 12px;
         display: grid; 
         flex: 1; 
-        grid-template-rows: 31% 31% 38%;
+        grid-template-rows: 25% 41% 34%;
         
         .SkillSpecificsSizing {
           text-align: center; 
@@ -345,7 +340,6 @@ h4 {
       display: flex; 
       flex-direction: column; 
       justify-content: center;
-      box-shadow: 0 1rem 3rem #6C757D;
 
       img {
         width: 100%;
@@ -411,6 +405,7 @@ h4 {
     .ContactFormRequiredLabelFormat {
       padding-left: 5px;
       margin: 0px;
+      color: #8495AB
     }
   
     .ContactFormCheckboxGrid {
