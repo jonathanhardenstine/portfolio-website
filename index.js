@@ -2,10 +2,18 @@ import express from "express";
 import moment from "moment";
 import bodyParser from "body-parser";
 import env from "dotenv";
-import skill_pages_json from "./assets/json/skill_pages.json" assert {type: "json"}
-import skill_types_contactform_json from "./assets/json/skill_types_contactform.json" assert {type: "json"}
-import skill_types_json from "./assets/json/skill_types.json" assert {type: "json"}
-import skills_list_json from "./assets/json/skills_list.json" assert {type: "json"}
+import axios from 'axios';
+
+async function setJSONvars(endpoint) {
+    const response = await axios.get(endpoint);
+    return response.data
+}
+
+var getJSONdata = new Boolean(true);
+var skill_pages_json;
+var skill_types_contactform_json;
+var skill_types_json;
+var skills_list_json;
 
 const app = express();
 env.config();
@@ -17,17 +25,27 @@ app.use(express.static("assets"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.listen(port, () => {
+app.listen(port, async () => {
     console.log(`Server rnning on port: ${port}.`);
 });
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+    if (getJSONdata) {
+        skill_pages_json = await setJSONvars("https://api.npoint.io/3afde83d436a472e10fd");
+        skill_types_contactform_json = await setJSONvars("https://api.npoint.io/8b977176889f22eafcc3");
+        skill_types_json = await setJSONvars("https://api.npoint.io/adb8fcc1072339519069");
+        skills_list_json = await setJSONvars("https://api.npoint.io/702326b83c75afe88d45");
+
+        getJSONdata = false;
+    } 
+
     const data = {
         "pageTitle": "Home",
         "UpdatedDate": moment().format('YYYY'),
     };
     res.render("home.ejs", data);
 });
+
 
 app.get("/about", (req, res) => {
     const data = {
@@ -93,9 +111,9 @@ app.get("/skillslist-*", (req, res) => {
         "/skillslist-websites": {
             "pageTitle": "Skills",
             "UpdatedDate": moment().format('YYYY'),
-            "skillTypeName": "Website Development",
+            "skillTypeName": "Web Development",
             "skillTypeData": skill_types_json,
-            "skillCards": skills_list_json["Website Development"],
+            "skillCards": skills_list_json["Web Development"],
             "Certifications": []},
         "/skillslist-software": {
             "pageTitle": "Skills",
