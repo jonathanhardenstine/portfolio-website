@@ -7,9 +7,9 @@
                 <% skillCards.forEach((data) => { %>
                     <div class="SkillNameCards">
                         <% if (data.Training[0] == "Udemy course to be completed in 2025" || data.Training[0] == "TBD post-2025") { %>
-                        <%- '<a' + '" class="SkillNameCardsLink TrainingInProgress">' %>
+                            <a class="SkillNameCardsLink TrainingInProgress">
                         <% } else { %>
-                        <%- '<a href="' + data["skill_href"] + '" class="SkillNameCardsLink SkillNameCardTextColor">' %>
+                            <%- '<a href="' + data["skill_href"] + '" class="SkillNameCardsLink SkillNameCardTextColor">' %>
                         <% } %>
                             <div class="SkillNameSizing">
                                 <%= data["Skill Title"] %>
