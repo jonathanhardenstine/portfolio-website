@@ -97,31 +97,29 @@ app.get("/skillslist-*", (req, res) => {
             "UpdatedDate": moment().format('YYYY'),
             "skillTypeName": "Data Analytics",
             "skillTypeData": skill_types_json,
-            "skillCards": skills_list_json["Data Analytics"],
-            "Certifications": ["/images/Career Certification - Data Analyst Associate.png",
-                            "images/Career Certification - Data Engineer Associate.png",
-                            "/images/Technology Certification - SQL Associate.png"]},
+            "skillCards": skills_list_json["Data Analytics"]["SkillsList"],
+            "Certifications": skills_list_json["Data Analytics"]["Certifications"]},
         "/skillslist-databases": {
             "pageTitle": "Skills",
             "UpdatedDate": moment().format('YYYY'),
             "skillTypeName": "Database Architecture",
             "skillTypeData": skill_types_json,
-            "skillCards": skills_list_json["Database Architecture"],
-            "Certifications": []},
+            "skillCards": skills_list_json["Database Architecture"]["SkillsList"],
+            "Certifications": skills_list_json["Database Architecture"]["Certifications"]},
         "/skillslist-websites": {
             "pageTitle": "Skills",
             "UpdatedDate": moment().format('YYYY'),
             "skillTypeName": "Web Development",
             "skillTypeData": skill_types_json,
-            "skillCards": skills_list_json["Web Development"],
-            "Certifications": []},
+            "skillCards": skills_list_json["Web Development"]["SkillsList"],
+            "Certifications": skills_list_json["Web Development"]["Certifications"]},
         "/skillslist-software": {
             "pageTitle": "Skills",
             "UpdatedDate": moment().format('YYYY'),
             "skillTypeName": "Software Development",
             "skillTypeData": skill_types_json,
-            "skillCards": skills_list_json["Software Development"],
-            "Certifications": []}
+            "skillCards": skills_list_json["Software Development"]["SkillsList"],
+            "Certifications": skills_list_json["Software Development"]["Certifications"]}
     };
     
     res.render("skills-list.ejs", data[req.path]);
