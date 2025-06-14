@@ -29,21 +29,22 @@ app.listen(port, async () => {
     console.log(`Server rnning on port: ${port}.`);
 });
 
-app.get("/", async (req, res) => {
-    if (getJSONdata) {
-        skill_pages_json = await setJSONvars("https://api.npoint.io/3afde83d436a472e10fd");
-        skill_types_contactform_json = await setJSONvars("https://api.npoint.io/8b977176889f22eafcc3");
-        skill_types_json = await setJSONvars("https://api.npoint.io/adb8fcc1072339519069");
-        skills_list_json = await setJSONvars("https://api.npoint.io/702326b83c75afe88d45");
-
-        getJSONdata = false;
-    } 
+app.get("/", (req, res) => {
 
     const data = {
         "pageTitle": "Home",
         "UpdatedDate": moment().format('YYYY'),
     };
     res.render("home.ejs", data);
+
+    if (getJSONdata) {
+        skill_pages_json = setJSONvars("https://api.npoint.io/3afde83d436a472e10fd");
+        skill_types_contactform_json = setJSONvars("https://api.npoint.io/8b977176889f22eafcc3");
+        skill_types_json = setJSONvars("https://api.npoint.io/adb8fcc1072339519069");
+        skills_list_json = setJSONvars("https://api.npoint.io/702326b83c75afe88d45");
+
+        getJSONdata = false;
+    } 
 });
 
 
