@@ -4,10 +4,12 @@ import bodyParser from "body-parser";
 import env from "dotenv";
 import axios from 'axios';
 
+/*
 async function setJSONvars(endpoint) {
     const response = await axios.get(endpoint);
     return response.data
 }
+*/
 
 var getJSONdata = new Boolean(true);
 var skill_pages_json;
@@ -29,22 +31,44 @@ app.listen(port, async () => {
     console.log(`Server rnning on port: ${port}.`);
 });
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+    /*
+    if (getJSONdata) {
+        skill_pages_json = await setJSONvars("https://api.npoint.io/3afde83d436a472e10fd");
+        skill_types_contactform_json = await setJSONvars("https://api.npoint.io/8b977176889f22eafcc3");
+        skill_types_json = await setJSONvars("https://api.npoint.io/adb8fcc1072339519069");
+        skills_list_json = await setJSONvars("https://api.npoint.io/702326b83c75afe88d45");
+
+        getJSONdata = false;
+    } 
+    */
+
+    const requests = [
+        axios.get("https://api.npoint.io/3afde83d436a472e10fd"), //skill_pages
+        axios.get("https://api.npoint.io/8b977176889f22eafcc3"), //skill_types_contactform
+        axios.get("https://api.npoint.io/adb8fcc1072339519069"), //skill_types
+        axios.get("https://api.npoint.io/702326b83c75afe88d45") //skills_list
+    ];
+
+    if (getJSONdata) {
+        await axios.all(requests).then(axios.spread((skill_pages, skill_types_contactform, skill_types, skills_list) => {
+            // Handle the responses
+            skill_pages_json = skill_pages.data;
+            skill_types_contactform_json = skill_types_contactform.data;
+            skill_types_json = skill_types.data;
+            skills_list_json = skills_list.data;
+            getJSONdata = false;
+        }))
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    }
 
     const data = {
         "pageTitle": "Home",
         "UpdatedDate": moment().format('YYYY'),
     };
     res.render("home.ejs", data);
-
-    if (getJSONdata) {
-        skill_pages_json = setJSONvars("https://api.npoint.io/3afde83d436a472e10fd");
-        skill_types_contactform_json = setJSONvars("https://api.npoint.io/8b977176889f22eafcc3");
-        skill_types_json = setJSONvars("https://api.npoint.io/adb8fcc1072339519069");
-        skills_list_json = setJSONvars("https://api.npoint.io/702326b83c75afe88d45");
-
-        getJSONdata = false;
-    } 
 });
 
 
