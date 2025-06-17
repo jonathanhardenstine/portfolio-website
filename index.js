@@ -45,11 +45,15 @@ app.listen(port, async () => {
     console.log(`Server rnning on port: ${port}.`);
 });
 
-app.get("/", (req, res) => {
+app.use("/", (req, res, next) => {
 
     if (getJSONdata) {
          setJSONdata();
     }
+    next();
+});
+
+app.get("/", (req, res) => {
 
     const data = {
         "pageTitle": "Home",
