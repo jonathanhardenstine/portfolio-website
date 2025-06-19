@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import env from "dotenv";
 import axios from 'axios';
 
-async function setJSONdata() {
+async function setJSONvar() {
     const requests = [
         axios.get("https://api.npoint.io/3afde83d436a472e10fd"), //skill_pages
         axios.get("https://api.npoint.io/8b977176889f22eafcc3"), //skill_types_contactform
@@ -45,13 +45,6 @@ app.listen(port, async () => {
     console.log(`Server rnning on port: ${port}.`);
 });
 
-app.use("/", (req, res, next) => {
-
-    if (getJSONdata) {
-         setJSONdata();
-    }
-    next();
-});
 
 app.get("/", (req, res) => {
 
@@ -91,7 +84,11 @@ function setContactPageVariables(submitID, submitText, res) {
     res.render("contact.ejs", data);
 }
 
-app.get("/contact", (req, res) => {
+app.get("/contact", async (req, res) => {
+    if (getJSONdata) {
+        await setJSONvar();
+    }
+
     if (JSON.stringify(req.query) === "{}") {
         setContactPageVariables("Default", "Hidden", res);
     } else if (req.query.Success) {
@@ -106,7 +103,11 @@ app.get("/contact", (req, res) => {
 ///////////////////
 // skills routing
 ///////////////////
-app.get("/skillslist-*", (req, res) => {
+app.get("/skillslist-*", async (req, res) => {
+    if (getJSONdata) {
+        await setJSONvar();
+    }
+
     const data = {
         "/skillslist-analytics": {
             "pageTitle": "Skills",
@@ -144,7 +145,12 @@ app.get("/skillslist-*", (req, res) => {
 ///////////////////
 // individual skill page routing
 ///////////////////
-app.get("/skillpage-*", (req, res) => {
+app.get("/skillpage-*", async (req, res) => {
+
+    if (getJSONdata) {
+        await setJSONvar();
+    }
+
     const data = {
         "pageTitle": "Skills",
         "UpdatedDate": moment().format('YYYY'),
