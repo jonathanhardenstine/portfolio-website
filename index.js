@@ -162,6 +162,7 @@ app.get("/skillpage-*", async (req, res) => {
         "ProjectDocumentation": skill_pages_json[req.path]["Project Documentation"],
         "Video": skill_pages_json[req.path]["Video"],
         "CertificationPrimary": skill_pages_json[req.path]["Primary Certification"],
+        "CertificationPrimaryAltText": skill_pages_json[req.path]["Primary Certification AltText"],
         "CertificationsAddtl": skill_pages_json[req.path]["Additional Certifications"]
     }
 
