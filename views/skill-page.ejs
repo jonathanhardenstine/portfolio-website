@@ -25,15 +25,15 @@
                             <% ProjectDocumentation.forEach((document) => { %>
                                 <div class="Carousel">
                                     <%- '<h6 class="ProjectDocumentationDesc">' + document["description"] + '</h6>' %>
-                                    <%- '<img src="' + document["image"] + '" class="ProjectDocumentationImg" alt="' + document["description"] + '">' %>
+                                    <%- '<img src="' + document["image"] + '" class="ProjectDocumentationImg" alt="' + document["description"] + '" />' %>
                                 </div>
                             <% }); %>
                             <video width="205px" height="443px" controls autoplay loop>
-                                <%- '<source src="' + Video + '" type="video/mp4">' %>
+                                <%- '<source src="' + Video + '" type="video/mp4" />' %>
                             </video>
                         <% } else if (CertificationPrimary != "N/A")  { %>
                             <div class="PrimaryCertificationImg">
-                                <%- '<img src="' + CertificationPrimary + '">' %>
+                                <%- '<img src="' + CertificationPrimary + '" alt="' + CertificationPrimaryAltText + '" />' %>
                             </div>
                         <% } else { %>
                             <div></div>

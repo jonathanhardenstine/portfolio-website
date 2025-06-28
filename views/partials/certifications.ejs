@@ -1,7 +1,7 @@
 <% if (Certifications.length > 0) { %>
     <div class="CertificationPositioning">
         <% Certifications.forEach((certification) => { %>
-            <%- '<img src="' + certification + '" class="CertificationImg">' %>
+            <%- '<img src="' + certification["certification_src"] + '" class="CertificationImg" alt="' + certification["certification_src_text"] + '" />' %>
         <% }); %>
     </div>
 <% } %>
